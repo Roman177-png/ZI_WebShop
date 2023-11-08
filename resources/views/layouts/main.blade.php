@@ -167,7 +167,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="{{ route('color.index') }}" class="nav-link">
                 <i class="fas fa-palette"></i>
                 <p>
                 Colors
