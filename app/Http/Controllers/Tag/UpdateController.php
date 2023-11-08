@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Category\UpdateRequest;
+use App\Http\Requests\Tag\UpdateRequest;
+//use App\Http\Requests\Tag\UpdateRequest;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 

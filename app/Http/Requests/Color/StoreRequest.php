@@ -23,6 +23,8 @@ class StoreRequest extends FormRequest
     {
         return [
             //
+            'title' => 'required|string',
+            'hex' => 'required|string'
         ];
     }
 }
