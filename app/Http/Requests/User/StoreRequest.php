@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Color;
+namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,9 +22,14 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //'title' => ['required', 'regex:/^{{A-Fa-10-9]{6}|[A-Fa-10-9]{3})$/']
-            'title' => 'required|string',
-            'hex' => 'required|string'
+            'name' => 'required|string',
+            'email' => 'required|string|unique:users.email',
+            'password' => 'required|string|confirmed',
+            'surname' => 'nullable|string',
+            'patronymic' => 'nullable|string',
+            'age' => 'nullable|integer', 
+            'address' => 'nullable|string',
+            'gender' => 'nullable|integer'
         ];
     }
 }

@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Tags</h1>
+              <h1 class="m-0">Users</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -25,7 +25,7 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <a href="{{ route('tag.create') }}" class="btn btn-primary">Add</a>
+                <a href="{{ route('user.create') }}" class="btn btn-primary">Add</a>
               </div>
               
               <div class="card-body table-responsive p-0">
@@ -34,14 +34,25 @@
                   <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Surname</th>
+                    <th>Patronymic</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
                   </tr>
                   </thead>    
                   <tbody>
-                  @foreach ($tags as $tag)
+                  @foreach ($users as $user)
                   <tr>
-                    <td>{{ $tag->id }}</td>
-                    <td><a href="{{ route('tag.show', $tag->id) }}"> {{ $tag->title }}</a></td>
-                    {{-- <td><div style="width: 16px; height:16px; background: {{ '#' . $tag->title }}"></div></td> --}}
+                    <td>{{ $user->id }}</td>
+                    <td><a href="{{ route('user.show', $user->id) }}"> {{ $user->name }}</a></td>
+                    <td>{{ $user->username }}</td>
+                    <td>{{ $user->patronymic }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->age }}</td>
+                    <td>{{ $user->genderTitle }}</td>
+                    <td>{{ $user->address }}</td>
                   </tr>
                   @endforeach
                   </tbody>
