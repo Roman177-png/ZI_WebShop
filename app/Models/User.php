@@ -16,6 +16,7 @@ class User extends Authenticatable
     const GENDER_FEMALE = 2;
     
     protected $table  = 'users';
+    protected $fillable = ['name', 'surname', 'email', 'password', 'patronymic', 'age', 'gender', 'address'];
     protected $guarded = false;
 
     static function getGenders(){
@@ -24,15 +25,19 @@ class User extends Authenticatable
             self::GENDER_FEMALE => 'Female',
         ];
     }
-    public function getGenderTitleAttributes(){
+    // public function getGenderTitleAttributes(){
+    //     return self::getGenders()[$this->gender];
+    // }
+    public function getGenderTitleAttribute()
+    {
         return self::getGenders()[$this->gender];
     }
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = ['name', 'surname', 'email', 'password', 'patronymic', 'age', 'gender', 'address'];
 
     /**
      * The attributes that should be hidden for serialization.

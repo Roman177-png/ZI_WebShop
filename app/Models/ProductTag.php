@@ -5,11 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class ProductTag extends Model
 {
-    protected $table = "tags";
+    protected $table = 'product_tags';
     protected $guarded = false;
-    // protected $fillable = ['title'];
-    use HasFactory;
-
 }
