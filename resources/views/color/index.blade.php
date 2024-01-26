@@ -34,6 +34,8 @@
                   <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Color</th>
+
                   </tr>
                   </thead>    
                   <tbody>
@@ -41,7 +43,7 @@
                   <tr>
                     <td>{{ $color->id }}</td>
                     <td><a href="{{ route('color.show', $color->id) }}"> {{ $color->title }}</a></td>
-                    <td>{{ $color->hex }}</td>
+                    <td><div style="width: 16px; height:16px; background: {{'#'. $color->title }}"></div></td>
                   </tr>
                   @endforeach
                   </tbody>

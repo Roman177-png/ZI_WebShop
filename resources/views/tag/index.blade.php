@@ -38,6 +38,8 @@
                   </thead>    
                   <tbody>
                   @foreach ($tags as $tag)
+                  {{-- {{ dd($tag->title) }} --}}
+
                   <tr>
                     <td>{{ $tag->id }}</td>
                     <td><a href="{{ route('tag.show', $tag->id) }}"> {{ $tag->title }}</a></td>

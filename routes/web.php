@@ -41,6 +41,7 @@ Route::group(['prefix' => 'users'], function(){
     Route::get('/{user}', \App\Http\Controllers\User\ShowController::class)->name('user.show');
     Route::patch('/{user}', \App\Http\Controllers\User\UpdateController::class)->name('user.update');
     Route::delete('/{user}', \App\Http\Controllers\User\DeleteController::class)->name('user.delete');
+});
 Route::group(['prefix' => 'colors'], function(){
     Route::get('/', \App\Http\Controllers\Color\IndexController::class)->name('color.index');
     Route::get('/create', \App\Http\Controllers\Color\CreateController::class)->name('color.create');
@@ -49,4 +50,13 @@ Route::group(['prefix' => 'colors'], function(){
     Route::get('/{color}', \App\Http\Controllers\Color\ShowController::class)->name('color.show');
     Route::patch('/{color}', \App\Http\Controllers\Color\UpdateController::class)->name('color.update');
     Route::delete('/{color}', \App\Http\Controllers\Color\DeleteController::class)->name('color.delete');
+});
+Route::group(['prefix' => 'products'], function(){
+    Route::get('/', \App\Http\Controllers\Product\IndexController::class)->name('product.index');
+    Route::get('/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');
+    Route::post('/', \App\Http\Controllers\Product\StoreController::class)->name('product.store');
+    Route::get('/{product}/edit', \App\Http\Controllers\Product\EditController::class)->name('product.edit');
+    Route::get('/{product}', \App\Http\Controllers\Product\ShowController::class)->name('product.show');
+    Route::patch('/{product}', \App\Http\Controllers\Product\UpdateController::class)->name('product.update');
+    Route::delete('/{product}', \App\Http\Controllers\Product\DeleteController::class)->name('product.delete');
 });

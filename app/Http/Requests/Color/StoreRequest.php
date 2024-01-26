@@ -11,7 +11,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,7 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //'title' => ['required', 'regex:/^{{A-Fa-10-9]{6}|[A-Fa-10-9]{3})$/']
+            // 'title' => ['required', 'regex:/^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/']
             'title' => 'required|string',
             'hex' => 'required|string'
         ];
