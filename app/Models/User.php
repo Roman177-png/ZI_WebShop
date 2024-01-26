@@ -17,7 +17,7 @@ class User extends Authenticatable
     
     protected $table  = 'users';
     protected $fillable = ['name', 'surname', 'email', 'password', 'patronymic', 'age', 'gender', 'address'];
-    protected $guarded = false;
+    // protected $guarded = false;
 
     static function getGenders(){
         return [

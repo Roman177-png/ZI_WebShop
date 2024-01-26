@@ -37,12 +37,12 @@
                   </tr>
                   </thead>    
                   <tbody>
-                  @foreach ($tag as $tags)
-                  {{ dd($tags->title) }}
+                  @foreach ($tags as $tag)
+                  {{ dd($tag->title) }}
 
                   <tr>
-                    <td>{{ $tags->id }}</td>
-                    <td><a href="{{ route('tag.show', $tags->id) }}"> {{ $tags->title }}</a></td>
+                    <td>{{ $tag->id }}</td>
+                    <td><a href="{{ route('tag.show', $tag->id) }}"> {{ $tag->title }}</a></td>
                     {{-- <td><div style="width: 16px; height:16px; background: {{ '#' . $tag->title }}"></div></td> --}}
                   </tr>
                   @endforeach

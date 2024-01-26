@@ -7,28 +7,28 @@
       <form action="{{ route('user.store') }}" method="post">
         @csrf
         <div class="form-group">
-          <input type="text" value="{{ old('name') }}" name="name" class="form-control" placeholder="Name">
+          <input type="text" value="{{ old('name') }}" name="name" class="form-control" placeholder="name">
         </div>
         <div class="form-group">
-          <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email">
+          <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="email">
         </div>
         <div class="form-group">
-          <input type="password" value="{{ old('password') }}" name="password" class="form-control" placeholder="Password">
+          <input type="password" value="{{ old('password') }}" name="password" class="form-control" placeholder="password">
         </div>
         <div class="form-group">
           <input type="password" value="{{ old('password_confirmation') }}" name="password_confirmation" class="form-control" placeholder="Confirm password">
         </div>
         <div class="form-group">
-          <input type="text" value="{{ old('surname') }}" name="surname" class="form-control" placeholder="Surname">
+          <input type="text" value="{{ old('surname') }}" name="surname" class="form-control" placeholder="surname">
         </div>
         <div class="form-group">
-          <input type="text" value="{{ old('patronymic') }}" name="patronymic" class="form-control" placeholder="Patronymic">
+          <input type="text" value="{{ old('patronymic') }}" name="patronymic" class="form-control" placeholder="patronymic">
         </div>
         <div class="form-group">
           <input type="text" value="{{ old('age') }}" name="age" class="form-control" placeholder="Age">
         </div>
         <div class="form-group">
-          <input type="text" value="{{ old('address') }}" name="address" class="form-control" placeholder="Address">
+          <input type="text" value="{{ old('address') }}" name="address" class="form-control" placeholder="address">
         </div>
         <div class="form-group">
           <select name="gender" class="custom-select form-control" id="exampleSelectBorder">

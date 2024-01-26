@@ -12,6 +12,6 @@ class IndexController extends Controller
     {
         $colors = Color::all();
 
-        return view('color.index', compact($colors));
+        return view('color.index', compact('colors'));
     }
 }
