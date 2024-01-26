@@ -38,7 +38,7 @@
                   </thead>    
                   <tbody>
                   @foreach ($tags as $tag)
-                  {{ dd($tag->title) }}
+                  {{-- {{ dd($tag->title) }} --}}
 
                   <tr>
                     <td>{{ $tag->id }}</td>

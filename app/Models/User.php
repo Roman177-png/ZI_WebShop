@@ -16,7 +16,7 @@ class User extends Authenticatable
     const GENDER_FEMALE = 2;
     
     protected $table  = 'users';
-    protected $fillable = ['name', 'surname', 'email', 'password', 'patronymic', 'age', 'gender', 'address'];
+    // protected $fillable = ['name', 'surname', 'email', 'password', 'patronymic', 'age', 'gender', 'address'];
     // protected $guarded = false;
 
     static function getGenders(){
@@ -44,6 +44,16 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $fillable = [
+        'name',
+        'email',
+        'surname',
+        'patronymic',
+        'address',
+        'age',
+        'gender',
+        'password',
+    ];
     protected $hidden = [
         'password',
         'remember_token',
@@ -56,6 +66,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        // 'password' => 'hashed',
     ];
 }

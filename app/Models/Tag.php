@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     protected $table = "tags";
-    protected $guarded = false;
+    // protected $guarded = false;
+    protected $guarded = [];
+    use HasFactory;
     // protected $fillable = ['title'];
 
 }
