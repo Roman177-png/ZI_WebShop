@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Colors</h1>
+              <h1 class="m-0">Group</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -25,28 +25,29 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <a href="{{ route('color.create') }}" class="btn btn-primary">Add</a>
-              </div>
+                <! -- -->
+                <div class="card-header d-flex p-3">
+                  <div class="mr-3">
+                    <a href="{{ route('group.edit', $group->id) }}" class="btn btn-primary">Edit</a>
+                  </div>
+                  <form action="{{ route('group.delete', $group->id) }}" method="post">
+                    @csrf
+                    @method('delete')
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                  </form>
+                </div>
               
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
-                  <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Color</th>
-
-                  </tr>
-                  </thead>    
+                <table class="table table-hover text-nowrap">  
                   <tbody>
-                    
-                  @foreach ($colors as $color)
                   <tr>
-                    <td>{{ $color->id }}</td>
-                    <td><a href="{{ route('color.show', $color->id) }}"> {{ $color->title }}</a></td>
-                    <td><div style="width: 16px; height:16px; background: {{'#'. $color->hex }}"></div></td>
+                    <td>ID</td>
+                    <td>{{ $group->id }}</td>
                   </tr>
-                  @endforeach
+                  <tr>
+                    <td>Title</td>
+                    <td>{{ $group->title }}</td>
+                  </tr>
                   </tbody>
                 </table>
               </div>
@@ -58,5 +59,4 @@
           <!-- /.row -->
         </div><!-- /.container-fluid -->
       </section>
-      <!-- /.content -->
 @endsection

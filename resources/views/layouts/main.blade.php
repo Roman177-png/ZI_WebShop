@@ -177,6 +177,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('group.index') }}" class="nav-link">
+                <i class="fas fa-palette"></i>
+                <p>
+                Group
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('user.index') }}" class="nav-link">
                 <i class="fas fa-users"></i>
                 <p>

@@ -18,7 +18,7 @@ return new class extends Migration
 
         //     $table->timestamps();
         // });
-        Schema::create('products_tag', function (Blueprint $table) {
+        Schema::create('product_tags', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tag_id')->nullable()->index()->constrained('tags')
                 ->onDelete('cascade');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products_tag');
+        Schema::dropIfExists('product_tags');
     }
 };

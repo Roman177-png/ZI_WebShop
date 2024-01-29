@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace App\Http\Controllers\Group;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\Group;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+    //
     public function __invoke()
     {
-        $products = Product::all();
-        return view('product.index', compact('products'));
+        $groups = Group::all();
+        return view('group.index', compact('groups'));
     }
 }

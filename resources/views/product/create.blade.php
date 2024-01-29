@@ -60,6 +60,14 @@
                 </select>
               </div>
               <div class="form-group">
+                <select name="group_id" class="form-control select2" style="width: 100%;">
+                  <option selected="selected" disabled>Choose group</option>
+                  @foreach ($groups as $group)
+                  <option value="{{ $group->id }}">{{ $group->title }}</option>
+                  @endforeach
+                </select>
+              </div>
+              <div class="form-group">
                 <select name="tags[]" class="tags" multiple="multiple" data-placeholder="Select a tag" style="width: 100%;">
                 @foreach ($tags as $tag)
                   <option value="{{ $tag->id }}">{{ $tag->title }}</option>
@@ -73,6 +81,13 @@
                   @endforeach
                 </select>
               </div>
+              {{-- <div class="form-group">
+                <select name="groups[]" class="groups" multiple="multiple" data-placeholder="Select a group" style="width: 100%;">
+                  @foreach ($groups as $group)
+                    <option value="{{ $group->id }}">{{ $group->title }}</option>
+                  @endforeach
+                </select>
+              </div> --}}
               <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Add">
               </div>

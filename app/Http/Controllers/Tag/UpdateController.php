@@ -15,6 +15,6 @@ class UpdateController extends Controller
         $data = $request->validated();
         $tag->update($data);
         // dd($tag);
-        return view('tag.index', compact('tag'));
+        return view('tag.show', compact('tag'));
     }
 }
