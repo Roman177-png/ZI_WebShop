@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
-    //
     public function __invoke(Product $product)
     {
         return view('product.edit', compact('product'));

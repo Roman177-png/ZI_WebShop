@@ -22,7 +22,8 @@ class StoreController extends Controller
           
           $tagsIds = $data['tags'];
           $colorsIds = $data['colors'];
-          unset( $data['tags'], $data['colors']);
+          // $groupsIds = $data['groups'];
+          unset( $data['tags'], $data['colors'], $data['groups']);
           $product = Product::firstOrCreate([
             'title' => $data['title'],
           ], $data);
@@ -40,6 +41,12 @@ class StoreController extends Controller
                 'color_id' => $colorsId,
             ]);
           }
+          // foreach($groupsIds as $groupsId){
+          //   ColorProduct::firstOrCreate([
+          //       'product_id' => $product->id,
+          //       'color_id' => $colorsId,
+          //   ]);
+          // }
           
           //Product::firstOrCreate($data);
 
